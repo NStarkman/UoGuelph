@@ -1,0 +1,10 @@
+-classpath '/course/coursework/A2/A2/build/classes/java/main:/course/coursework/A2/A2/build/resources/main'
+-d '/course/coursework/A2/A2/build/docs/javadoc'
+-doctitle 'A2 API'
+-notimestamp 
+-quiet 
+-windowtitle 'A2 API'
+'/course/coursework/A2/A2/src/main/java/connectfour/Board.java'
+'/course/coursework/A2/A2/src/main/java/connectfour/ConnectFour.java'
+'/course/coursework/A2/A2/src/main/java/connectfour/Runner.java'
+'/course/coursework/A2/A2/src/main/java/connectfour/TextUI.java'
