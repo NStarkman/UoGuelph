@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mister Molecules</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <meta charset = "utf-8">
+</head>
+<body>
+  <header>
+    <nav>
+      <a id="logo">Mister Molecule</a>
+      <ul id="nav-mobile">
+        <li><a href=#add class="nav-link" data-section="add-element">Add/Remove Elements</a></li>
+        <li><a href=#upload class="nav-link" data-section="uploadSDF">Upload SDF Files</a></li>
+        <li><a href=#view class="nav-link" data-section="view-molecule">Select & Display Molecule</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <form action="element-page" id="add-element" class="section">
+      <div id="table-container">
+        <table id="element-table">
+          <thead>
+            <tr>
+              <th>Element Name</th>
+              <th>Element Code</th>
+              <th>First Color</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id = "element-table-body">
+            
+          </tbody>
+        </table>
+      </div>
+      
+        <div>
+          <div class="input-field">
+            <label for="element-number">Element Num</label>
+            <input type="number" id="element-number" name="element-number" required>
+          </div>
+          <div class="input-field">
+            <label for="element-code">Element Code</label>
+            <input type="text" id="element-code" name="element-code" required>
+          </div>
+          <div class="input-field">
+            <label for="element-name">Element Name</label>
+            <input type="text" id="element-name" name="element-name" required>
+          </div>
+          <div class="input-field">
+            <label for="color1">Color 1</label>
+            <input type="color" id="color1" name="color1" required>
+          </div>
+          <div class="input-field">
+            <label for="color2">Color 2</label>
+            <input type="color" id="color2" name="color2" required>
+          </div>
+          <div class="input-field">
+            <label for="color3">Color 3</label>
+            <input type="color" id="color3" name="color3" required>
+          </div>
+          <div class="input-field">
+            <label for="radius">Radius</label>
+            <input type="number" id="radius" name="radius" value="1" min="0.1" step="0.1" required>
+          </div>
+          <div class="input-field">
+            <button type="submit" id="add-element-button">Add Element</button>
+          </div>
+          <div id="add-feedback" class="hidden"></div>
+        </div>
+      </div>
+    </form>    
+    <form action="uploadSDF" method="POST" enctype="multipart/form-data" id="uploadSDF" class="section">
+      <h2>Upload SDF File</h2>
+      
+      <div class="input-field">
+        <label for="sdf-name">SDF Name</label>
+        <input type="text" id="sdf-name" name="sdf-name" required>
+      </div>
+      <div class="input-field">
+        <label for="sdf-file">Select SDF File</label>
+        <input type="file" id="sdf-file" name="sdf-file" accept=".sdf" required>
+      </div>
+      <div class="input-field">
+        <button type="submit" id="upload-button">Upload SDF File</button>
+      </div>
+      <div id="upload-feedback" class="hidden"></div>
+    </form>
+    
+   
+        
+
+    <form action="moleculeDetails" id="view-molecule" class="section">
+      <h2>Select & Display Molecule</h2>
+      <div id="view-mol">
+        <div id="table-container">
+          <table id="mol-table">
+            <thead>
+              <tr>
+                <th>Mol Name</th>
+                <th>Atom Num</th>
+                <th>Bond Num</th>
+                <th> View </th>
+              </tr>
+            </thead>
+            <tbody id="mol-table-body">
+              
+            </tbody>
+          </table>
+          <h1 id = mol-display> </h1>
+        </div>
+          <div id = image-container>
+            
+          </div>
+      </div>
+    </form>
+    <form id="rotate-svg-form">
+      <div class="input-field">
+        <label for="rotate-x">Rotate on X-axis:</label>
+        <input type="number" id="rotate-x" name="rotate-x" min="-360" max="360" step="1" value="0">
+      </div>
+      <div class="input-field">
+        <label for="rotate-y">Rotate on Y-axis:</label>
+        <input type="number" id="rotate-y" name="rotate-y" min="-360" max="360" step="1" value="0">
+      </div>
+      <div class="input-field">
+        <label for="rotate-z">Rotate on Z-axis:</label>
+        <input type="number" id="rotate-z" name="rotate-z" min="-360" max="360" step="1" value="0">
+      </div>
+      <div class="input-field">
+        <button type="submit" id="rotate-svg-button">Rotate SVG</button>
+      </div>
+    </form>
+  </div>
+</form>
+  </main>
+</body>
+</html>    

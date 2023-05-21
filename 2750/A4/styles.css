@@ -1,0 +1,226 @@
+body {
+  background-color: #212121;
+  color: #FFF;
+  font: 16px/1.5 "Open Sans", sans-serif;
+  margin-top: 80px; /* added to separate the nav bar from the body */
+}
+
+/* Style the nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1c1c1c;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: 1;
+}
+
+/* Style the logo */
+#logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+/* Style the navigation links */
+#nav-mobile {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-mobile li {
+  margin: 0 20px;
+}
+
+.nav-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #BB86FC;
+}
+
+/* Style the form headings */
+.section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}/* Center the add-element and upload-sdf sections */
+#add-element,
+#uploadSDF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+#element-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-right: 20px;
+  overflow: auto; /* added this to make the table scrollable */
+  max-height: 500px;
+  margin-bottom: 20px; /* added this to bring the table closer to the top */
+}
+
+#element-table th,
+#element-table td {
+  padding: 10px;
+  border: 1px solid #FFF;
+}
+
+#element-table th {
+  background-color: #BB86FC;
+  color: #212121;
+  font-weight: bold;
+}
+
+#element-table td:first-child {
+  width: 40%;
+}
+
+#element-table td:last-child {
+  width: 20%;
+}
+
+#element-table .color-preview {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+}
+
+/* Center the input fields in the add-element and upload-sdf sections */
+#add-element .input-field,
+#uploadSDF .input-field {
+  text-align: center;
+}
+
+#add-element .input-field label,
+#uploadSDF .input-field label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#add-element input[type="number"],
+#add-element input[type="text"],
+#add-element input[type="color"],
+#add-element input[type="file"],
+#uploadSDF input[type="number"],
+#uploadSDF input[type="text"],
+#uploadSDF input[type="color"],
+#uploadSDF input[type="file"],
+#rotate-svg-form input[type="number"]{
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  background-color: #333;
+  color: #FFF;
+}
+
+/* Style the color input fields */
+.input-field input[type="color"] {
+  width: 50px;
+  height: 30px;
+  padding: 0;
+}
+
+.input-field input[type="color"] + .color-preview {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+}
+#add-element .input-field input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+#add-element .input-field input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 3px;
+}
+/* Style the buttons */
+.input-field button {
+  background-color: #BB86FC;
+  color: #212121;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.input-field button:hover {
+  background-color: #9e6ae8;
+}
+
+/* Style the hidden feedback divs */
+.hidden {
+  display: none;
+}
+/* Style the display-molecule form */
+#display-molecule {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#view-mol {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+#table-container {
+  flex: 1 1 70%;
+  margin-right: 20px;
+  overflow: auto;
+  max-height: 500px;
+  margin-bottom: 20px;
+}
+
+#mol-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#mol-table th,
+#mol-table td {
+  padding: 10px;
+  border: 1px solid #FFF;
+}
+
+#mol-table th {
+  background-color: #BB86FC;
+  color: #212121;
+  font-weight: bold;
+}
+
+#image-container {
+  flex: 1 1 30%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+svg {
+  transform: scale(0.7);
+}
